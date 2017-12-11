@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^help', include('apptwo.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^users', include('apptwo.urls')),
 ]
