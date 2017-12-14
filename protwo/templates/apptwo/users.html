@@ -8,20 +8,38 @@
 
   </head>
   <body>
-    <h1>Here are your users for AppTwo:</h1>
-    {% if users %}
+    <div class="container">
+      <h1>Sign up here!</h1>
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+    </div>
 
-      <ol>
-        {% for person in users %}
-          <li>User Info</li>
-          <ul>
-            <li>First Name: {{ person.first_name }}</li>
-            <li>Last Name: {{ person.last_name }}</li>
-            <li>Email: {{ person.email }}</li>
-          </ul>
-        {% endfor %}
-      </ol>
-    {% endif %}
 
+
+
+<!--
+    <hr>
+    <div class="container">
+      <h1>Here are your users for AppTwo:</h1>
+
+
+      {% if users %}
+
+        <ol>
+          {% for person in users %}
+            <li>User Info</li>
+            <ul>
+              <li>First Name: {{ person.first_name }}</li>
+              <li>Last Name: {{ person.last_name }}</li>
+              <li>Email: {{ person.email }}</li>
+            </ul>
+          {% endfor %}
+        </ol>
+      {% endif %}
+    </div>
+-->
   </body>
 </html>
