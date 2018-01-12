@@ -3,5 +3,6 @@
   {% block body_block %}
     <h1>Welcome to Index Page</h1>
     <h1>{{text | upper}}</h1>
+    <h2>{{text | cut:'hello'}}</h2>
     <h1>{{number | add:'99'}}</h1>
   {% endblock %}
